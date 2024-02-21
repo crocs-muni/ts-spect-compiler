@@ -1,7 +1,10 @@
-# Run with:
+# Run with to get the deafult spect-compiler binary
 # $ nix run '.?submodules=1'
 # Or build with:
 # $ nix build '.?submodules=1'
+# Or specify the particular package:
+# $ nix run '.?submodules=1#spect-compiler'
+# $ nix run '.?submodules=1#spect-iss'
 
 {
   description = "TS Spect Compiler";
