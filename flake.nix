@@ -56,9 +56,11 @@
       in
       with pkgs;
       {
-        packages.spect-compiler = buildSpect "spect_compiler";
-        packages.spect-iss = buildSpect "spect_iss";
-        defaultPackage = buildSpect "spect_compiler";
+        packages = {
+          spect-compiler = buildSpect "spect_compiler";
+          spect-iss = buildSpect "spect_iss";
+          default = buildSpect "spect_compiler";
+        };
         devShells.default = mkShell {
           buildInputs = [
             cmake
